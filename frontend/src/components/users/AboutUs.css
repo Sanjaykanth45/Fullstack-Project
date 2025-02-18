@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+.about-us {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    padding: 50px;
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+}
+
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./images/aboutus1.jpg") center/cover no-repeat;
+    filter: brightness(0.4); /* Darken background for better text visibility */
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background for better visibility */
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.value-item:hover {
+    transform: scale(1.05);
+}
+
+.value-icon {
+    font-size: 36px;
+    color: #ffcc00; /* Highlight icons */
+}
+
+.value-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.value-text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #e0e0e0;
+}

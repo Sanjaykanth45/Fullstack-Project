@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.testimonials {
+    background-color: #f8f8f8;
+    padding: 50px 10%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.testimonials-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 40px;
+    color: #ff9900;
+}
+
+.testimonial-feedback {
+    font-size: 16px;
+    color: #333;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.testimonial-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #ff9900;
+}
+
+.testimonial-user h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.star-icon {
+    color: #ff9900;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

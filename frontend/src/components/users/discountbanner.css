@@ -1,0 +1,110 @@
+.discount-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #00c853, #0091ea);
+    color: white;
+    padding: 40px 60px;
+   
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background glow */
+.discount-banner::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 60%);
+    z-index: 0;
+}
+
+.discount-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.discount-content h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.discount-content p {
+    font-size: 18px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.discount-input {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+}
+
+.discount-input input {
+    border: none;
+    padding: 14px 18px;
+    width: 320px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50px 0 0 50px;
+    font-weight: 500;
+}
+
+.discount-input input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.discount-input button {
+    background: #ffcc00; /* Bright accent */
+    color: #333;
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.discount-input button:hover {
+    background: #ffb700;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .discount-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .discount-content {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .discount-input {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .discount-input input {
+        width: 100%;
+    }
+}

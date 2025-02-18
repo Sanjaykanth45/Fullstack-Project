@@ -1,0 +1,77 @@
+/* Main container */
+.brand-container {
+    padding: 40px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.brand-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Brand card layout */
+.brand-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+.brand-card {
+    position: relative;
+    width: 500px;
+    height: 380px; /* Adjusted height to fit the brand name */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background: white; /* Ensure background is visible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image */
+.brand-image {
+    width: 100%;
+    height: 80%; /* Adjusted to leave space for the brand name */
+    object-fit: cover;
+}
+
+/* Hover overlay effect */
+.brand-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: white;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    transition: bottom 1s ease-in-out;
+}
+
+.brand-card:hover .brand-overlay {
+    bottom: 0;
+}
+
+/* Brand name (Below the image) */
+.brand-name {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+}

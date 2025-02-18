@@ -1,0 +1,54 @@
+/* Hero Section */
+.hero-section {
+    background: #E9FCE5;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Hero Container */
+.hero-container {
+    display: flex;
+    justify-content: space-between; /* Left & Right alignment */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 50px;
+}
+
+/* Hero Text (Left Side) */
+.hero-text {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+/* Hero Image (Right Side) */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image */
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    object-fit: contain;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.full-width-carousel img {
+    width: 100vw; /* Full width of viewport */
+    height: 500px; /* Maintain height */
+    object-fit: cover; /* Ensures image fills the container */
+}

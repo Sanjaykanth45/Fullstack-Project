@@ -1,0 +1,160 @@
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #114B1C;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Cart Table Container */
+.cart-container {
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.cart-table th {
+    background-color: #136F63;
+    color: white;
+    font-weight: bold;
+}
+
+.cart-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: 0.3s;
+}
+
+/* Product Image */
+.cart-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 6px 10px;
+    transition: 0.3s;
+}
+
+.btn-outline-success {
+    border: 1px solid #198754;
+    color: #198754;
+    background: transparent;
+}
+
+.btn-outline-success:hover {
+    background: #198754;
+    color: white;
+}
+
+.btn-danger {
+    background: #DC3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #bb2d3b;
+}
+
+/* Quantity Buttons */
+.quantity-btn {
+    border: none;
+    padding: 8px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.minus-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.minus-btn:hover {
+    background-color: #cc0000;
+}
+
+.plus-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.plus-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* Quantity Display */
+.quantity-value {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+/* Subtotal */
+.subtotal-container {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #136F63;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.subtotal-amount {
+    font-size: 26px;
+    font-weight: bold;
+    color: #28a745;
+}
+.checkout-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #136F63;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0f564f;
+}
