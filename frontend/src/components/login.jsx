@@ -48,7 +48,7 @@ const Login = () =>{
        
             <div className="login-container">
                 <div className="login-card">
-                    <h1 className="login-title">🚀 Welcome Back!</h1>
+                    <h1 className="login-title"> Welcome Back!</h1>
     
                     {message && <div className="login-alert">{message}</div>}
     

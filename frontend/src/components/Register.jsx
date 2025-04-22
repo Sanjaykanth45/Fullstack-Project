@@ -12,7 +12,7 @@ const Register = () => {
         e.preventDefault();
         try {
             await axios.post("http://localhost:5000/api/auth/register", data);
-            setMessage("Registration Successful! 🎉");
+            setMessage("Registration Successful!");
         } catch {
             setMessage("Error during registration.");
         }
@@ -21,7 +21,7 @@ const Register = () => {
     return (
         <div className="register-container">
             <div className="register-card">
-                <h2 className="register-title"> Register</h2>
+                <h2 className="register-title">Register</h2>
                 {message && <div className="register-alert">{message}</div>}
                 <form onSubmit={handleSubmit}>
                     {["username", "email", "password", "mobile"].map((field) => (
