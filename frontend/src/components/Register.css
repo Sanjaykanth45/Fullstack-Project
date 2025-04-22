@@ -50,7 +50,6 @@
 
 /* Add an Icon for Register */
 .register-title::before {
-    content: "🚀";
     font-size: 22px;
 }
 
