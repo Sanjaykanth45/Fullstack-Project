@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 dotenv.config();
 const app = express()
 
-const allowedOrigins = [process.env.APP_URL || 'http://localhost:3000', ''];
+const allowedOrigins = [process.env.APP_URL || 'http://localhost:3000', 'https://soleluxeecommerce.vercel.app/'];
 
 const corsOptions = {
   origin: function (origin, callback) {
