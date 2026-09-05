@@ -33,3 +33,6 @@ yarn-error.log*
 
 # React frontend build
 frontend/build/
+
+# Environment variables
+.env
