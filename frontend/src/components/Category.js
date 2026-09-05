@@ -22,7 +22,7 @@ import Navbar from "./navbar";
 
     // Fetch products from backend
     useEffect(() => {
-        axios.get("http://localhost:5000/api/auth/getProduct")
+        axios.get("https://fullstack-project-w1lg.onrender.com/api/auth/getProduct")
             .then(response => setProducts(response.data.products))
             .catch(error => console.error("Error fetching products:", error));
     }, [trigger]);
@@ -57,7 +57,7 @@ import Navbar from "./navbar";
 
             if (isEditing) {
                 // Update product
-                const res = await axios.put(`http://localhost:5000/api/auth/putCategory/${editId}`, formData, {
+                const res = await axios.put(`https://fullstack-project-w1lg.onrender.com/api/auth/putCategory/${editId}`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
@@ -66,7 +66,7 @@ import Navbar from "./navbar";
                 setMessage("Product updated successfully!");
             } else {
                 // Add new product
-                const res = await axios.post("http://localhost:5000/api/auth/category", formData, {
+                const res = await axios.post("https://fullstack-project-w1lg.onrender.com/api/auth/category", formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
@@ -103,7 +103,7 @@ import Navbar from "./navbar";
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure you want to delete this product?")) return;
         try {
-            await axios.delete(`http://localhost:5000/api/auth/deleteCategory/${id}`);
+            await axios.delete(`https://fullstack-project-w1lg.onrender.com/api/auth/deleteCategory/${id}`);
             setMessage("Product deleted successfully!");
             setTrigger((prev) => !prev);
         } catch (error) {
@@ -152,7 +152,7 @@ import Navbar from "./navbar";
                                     <td>{product.brandname}</td>
                                     <td>{product.productname}</td>
                                     <td>{product.description}</td>
-                                    <td><img src={`http://localhost:5000/images/${product.image}`} alt={product.productname} width="50" /></td>
+                                    <td><img src={`https://fullstack-project-w1lg.onrender.com/images/${product.image}`} alt={product.productname} width="50" /></td>
 
                                     <td>
                                         <button className="edit-btn" onClick={() => handleEdit(product)}>✏️ Edit</button>

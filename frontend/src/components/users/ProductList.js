@@ -13,7 +13,7 @@ const ProductList = () => {
         console.log("Fetching Products");
         const fetchProducts = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/auth/getProduct");
+                const res = await axios.get("https://fullstack-project-w1lg.onrender.com/api/auth/getProduct");
                 console.log("API Response:", res.data);
                 
                 if (Array.isArray(res.data)) {
@@ -55,7 +55,7 @@ const ProductList = () => {
                             <Link to={`/product-detail/${product._id}`} className="no-decoration"></Link>
                             <div className="product-card">
                                 <span className="sale-badge">Sale</span>
-                                <img src={`http://localhost:5000/images/${product.image}`} 
+                                <img src={`https://fullstack-project-w1lg.onrender.com/images/${product.image}`} 
                                      alt={product.productname} 
                                      className="product-img" />
                                 <h5>{product.productname}</h5>

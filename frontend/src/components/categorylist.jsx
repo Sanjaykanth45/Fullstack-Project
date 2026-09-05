@@ -22,7 +22,7 @@ const Categorylist = () => {
 
     // Fetch categories from backend
     useEffect(() => {
-        axios.get("http://localhost:5000/api/auth/getCategory")
+        axios.get("https://fullstack-project-w1lg.onrender.com/api/auth/getCategory")
             .then(response => {
                 console.log("Fetched Categories:", response.data);
                 setCategories(response.data.categories);
@@ -55,12 +55,12 @@ const Categorylist = () => {
 
             let response;
             if (isEditing) {
-                response = await axios.put(`http://localhost:5000/api/auth/putCategory/${editId}`, formData, {
+                response = await axios.put(`https://fullstack-project-w1lg.onrender.com/api/auth/putCategory/${editId}`, formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
                 setMessage("Category updated successfully!");
             } else {
-                response = await axios.post("http://localhost:5000/api/auth/category", formData, {
+                response = await axios.post("https://fullstack-project-w1lg.onrender.com/api/auth/category", formData, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
                 setMessage("Category added successfully!");
@@ -96,7 +96,7 @@ const Categorylist = () => {
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure you want to delete this category?")) return;
         try {
-            await axios.delete(`http://localhost:5000/api/auth/deleteCategory/${id}`);
+            await axios.delete(`https://fullstack-project-w1lg.onrender.com/api/auth/deleteCategory/${id}`);
             setMessage("Category deleted successfully!");
             setTrigger(prev => !prev);
         } catch (error) {
@@ -148,7 +148,7 @@ const Categorylist = () => {
                                     <td>{category.price}</td>
                                     <td>
                                         {category.image ? (
-                                            <img src={`http://localhost:5000/images/${category.image}`} alt={category.categoryname} width="50" />
+                                            <img src={`https://fullstack-project-w1lg.onrender.com/images/${category.image}`} alt={category.categoryname} width="50" />
                                         ) : "No Image"}
                                     </td>
                                     <td>

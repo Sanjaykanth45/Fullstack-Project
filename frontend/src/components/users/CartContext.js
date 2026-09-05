@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
                 return [...prevCart, { 
                     ...product, 
                     quantity: 1, // Ensure only one item is added
-                    image: `http://localhost:5000/images/${product.image}`
+                    image: `https://fullstack-project-w1lg.onrender.com/images/${product.image}`
                 }];
             }
         });

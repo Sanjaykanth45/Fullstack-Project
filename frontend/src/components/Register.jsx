@@ -70,7 +70,7 @@ const Register = () => {
 
         setLoading(true);
         try {
-            await axios.post("http://localhost:5000/api/auth/register", data);
+            await axios.post("https://fullstack-project-w1lg.onrender.com/api/auth/register", data);
             setMessage("Registration Successful!");
             setData({ username: "", email: "", password: "", mobile: "", gender: "" });
             setErrors({});

@@ -23,7 +23,7 @@ const Brand = () => {
     useEffect(() => {
         const fetchBrands = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/auth/getbrand");
+                const res = await axios.get("https://fullstack-project-w1lg.onrender.com/api/auth/getbrand");
                 setBrands(res.data.brands);
                 console.log("Fetched Brands:", res.data.brands); // ✅ Debugging
             } catch (error) {
@@ -50,12 +50,12 @@ const Brand = () => {
         try {
             if (isEditing) {
                 // Update brand
-                const res = await axios.put(`http://localhost:5000/api/auth/putbrand/${editId}`, brand);
+                const res = await axios.put(`https://fullstack-project-w1lg.onrender.com/api/auth/putbrand/${editId}`, brand);
                 console.log("Updated Brand:", res.data);
                 setMessage("Brand updated successfully!");
             } else {
                 // Add new brand
-                const res = await axios.post("http://localhost:5000/api/auth/brand", brand);
+                const res = await axios.post("https://fullstack-project-w1lg.onrender.com/api/auth/brand", brand);
                 console.log("New Brand Added:", res.data);
                 setMessage("Brand added successfully!");
             }
@@ -83,7 +83,7 @@ const Brand = () => {
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure you want to delete this brand?")) return;
         try {
-            await axios.delete(`http://localhost:5000/api/auth/deletebrand/${id}`);
+            await axios.delete(`https://fullstack-project-w1lg.onrender.com/api/auth/deletebrand/${id}`);
             setMessage("Brand deleted successfully!");
             setTrigger((prev) => !prev); // ✅ Force refresh
         } catch (err) {
