@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./productlist.css";
 import { CartContext } from "./CartContext";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
     const { addToCart, removeFromCart } = useContext(CartContext); 
@@ -51,6 +52,7 @@ const ProductList = () => {
                 {products.length > 0 ? (
                     products.map((product) => (
                         <div key={product._id} className="col-md-3">
+                            <Link to={`/product-detail/${product._id}`} className="no-decoration"></Link>
                             <div className="product-card">
                                 <span className="sale-badge">Sale</span>
                                 <img src={`http://localhost:5000/images/${product.image}`} 
@@ -61,6 +63,8 @@ const ProductList = () => {
                                 <p className="price">Price: ₹{product.price}</p>
 
                                 <button 
+                                     name="add-to-cart"  // Common name for all buttons
+                                     data-product-id={product._id}  // Custom attribute to uniquely identify the product
                                     className={`btn ${clickedButtons[product._id] ? "btn-added" : "btn-success"}`}
                                     onClick={() => handleCartToggle(product)}
                                 >

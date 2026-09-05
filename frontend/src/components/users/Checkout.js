@@ -68,9 +68,9 @@ const Checkout = () => {
                         ))}
                     </ul>
                     <hr />
-                    <p>Subtotal: ₹{subtotal.toFixed(2)}</p>
-                    <p>Delivery Charge: ₹50</p>
-                    <h3>Total: ₹{total.toFixed(2)}</h3>
+                    <p id="subtotal">Subtotal: ₹{subtotal.toFixed(2)}</p>
+                    <p id="DeliveryCharge">Delivery Charge: ₹50</p>
+                    <h3 id="Total">Total: ₹{total.toFixed(2)}</h3>
                 </div>
             </div>
         </div>

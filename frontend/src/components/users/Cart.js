@@ -52,14 +52,14 @@ const Cart = () => {
                                     <td>{index + 1}</td>
                                     <td><img src={item.image} alt={item.productname} className="cart-img" /></td>
                                     <td>{item.productname}</td>
-                                    <td>₹{item.price}</td>
+                                    <td className="price">₹{item.price}</td>
                                     <td>{item.brandname || "N/A"}</td>
                                     <td>
-                                        <button className="quantity-btn minus-btn" onClick={() => handleQuantityChange(item._id, -1)}>
+                                        <button id={`minus${index+1}`} className="quantity-btn minus-btn" onClick={() => handleQuantityChange(item._id, -1)}>
                                             <FontAwesomeIcon icon={faMinus} />
                                         </button>
                                         <span className="quantity-value">{item.quantity}</span>
-                                        <button className="quantity-btn plus-btn" onClick={() => handleQuantityChange(item._id, 1)}>
+                                        <button id={`plus${index+1}`} className="quantity-btn plus-btn" onClick={() => handleQuantityChange(item._id, 1)}>
                                             <FontAwesomeIcon icon={faPlus} />
                                         </button>
                                     </td>
@@ -67,7 +67,7 @@ const Cart = () => {
                                         <button className="btn btn-outline-success mx-2">
                                             <FontAwesomeIcon icon={faEye} />
                                         </button>
-                                        <button className="btn btn-danger" onClick={() => removeFromCart(item._id)}>
+                                        <button id="deleteButton" className="btn btn-danger" onClick={() => removeFromCart(item._id)}>
                                             <FontAwesomeIcon icon={faTrash} />
                                         </button>
                                     </td>

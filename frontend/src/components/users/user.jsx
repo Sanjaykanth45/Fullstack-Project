@@ -34,7 +34,7 @@ const User = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Modi consequuntur eaque expedita porro necessitatibus.
             </p>
             <div className="btn-group">
-                <button className="btn btn-primary">🛒 Shop Now</button>
+                <button id="shopNowButton" className="btn btn-primary">🛒 Shop Now</button>
                 <button className="btn btn-outline-primary">🎉 Get Offer</button>
             </div>
         </div>

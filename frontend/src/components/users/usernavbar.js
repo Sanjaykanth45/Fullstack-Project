@@ -3,8 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./usernavbar.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faPhone, faEnvelope, faCartShopping, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { CartContext } from "./CartContext"; // ✅ Import CartContext
 
 const UserNavbar = () => {
+    const { cart } = useContext(CartContext); // ✅ Access cart
+    const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0); // Count items
     const scrollToSection = (event, sectionId) => {
         event.preventDefault();
         document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
@@ -34,8 +38,17 @@ const UserNavbar = () => {
 
                     {/* Icons (Cart & Logout) */}
                     <div className="col-md-3 d-flex justify-content-end">
-                        <a href="/cart" className="nav-link mx-2">
+                    <a id="cart-icon" href="/cart" className="nav-link mx-2 position-relative">
                             <FontAwesomeIcon className="icon" icon={faCartShopping} />
+                            {/* ✅ Cart Count Badge */}
+                            {cartItemCount > 0 && (
+                                <span
+                                    id="cart-count" // ✅ Add ID for Selenium tests
+                                    className="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                                >
+                                    {cartItemCount}
+                                </span>
+                            )}
                         </a>
                         <a href="/login" className="nav-link mx-2">
                             <FontAwesomeIcon className="icon logout-icon" icon={faArrowRightFromBracket} />

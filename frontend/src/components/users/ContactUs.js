@@ -37,18 +37,18 @@ const ContactUs = () => {
           <h2>Send Us a Message</h2>
           <form>
             <div className="form-group">
-              <label>Name</label>
-              <input type="text" placeholder="Enter your name" required />
+              <label >Name</label>
+              <input id="senderName" type="text" placeholder="Enter your name" required />
             </div>
-            <div className="form-group">
+            <div  className="form-group">
               <label>Email</label>
-              <input type="email" placeholder="Enter your email" required />
+              <input id="senderEmail" type="email" placeholder="Enter your email" required />
             </div>
-            <div className="form-group">
+            <div  className="form-group">
               <label>Message</label>
-              <textarea placeholder="Your message..." rows="4" required></textarea>
+              <textarea id="senderMessage" placeholder="Your message..." rows="4" required></textarea>
             </div>
-            <button type="submit" className="contact-btn">Send Message</button>
+            <button id="messageSubmit" type="submit" className="contact-btn">Send Message</button>
           </form>
         </div>
       </div>
